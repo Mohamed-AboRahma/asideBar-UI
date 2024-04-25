@@ -1,0 +1,162 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #ddd;
+  height: 100vh;
+}
+
+.customAside {
+  width: 195px;
+  height: 95%;
+  background-color: white;
+  color: black;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 5px white;
+  position: relative;
+}
+
+.infoAboutUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  box-shadow: 2px 2px 10px rgb(227 213 213);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.infoAboutUser .userImage img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.infoAboutUser .userData {
+  display: flex;
+  flex-direction: column;
+}
+.userData .info .name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.infoAboutUser .userData .job {
+  opacity: 0.6;
+  font-family: monospace;
+}
+
+.mainPart {
+  margin-top: 25px;
+}
+.mainPart .mainWord {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.mainPart .mainEle,
+.mainPart .mainEleCustom {
+  width: fit-content;
+  margin-top: 25px;
+  display: flex;
+  place-items: center;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.mainPart .mainEleCustom {
+  width: 100%;
+  justify-content: space-between;
+}
+.mainPart .mainEleCustom :first-child {
+  display: flex;
+  place-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.settingPart {
+  margin-top: 20px;
+}
+.settingPart .settingWord {
+  opacity: 0.7;
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.settingEle {
+  display: flex;
+  place-items: center;
+  transition: all 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.accountPart {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.accountPart .accountWord {
+  opacity: 0.7;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.accountPart .accountEle {
+  display: flex;
+  place-items: center;
+  margin-top: 5px;
+  transition: all 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.mainPart .mainElements .mainEle i,
+.settingPart .settingEle i,
+.mainEleCustom i,
+.accountPart .accountEle i {
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.mainPart .mainElements .mainEle span,
+.mainEleCustom span,
+.settingPart .settingEle span,
+.accountPart .accountEle span {
+  opacity: 0.7;
+  cursor: pointer;
+  flex-grow: 2;
+}
+
+.mainPart .mainElements .mainEle:hover,
+.mainPart .mainElements .mainEleCustom div:first-child:hover,
+.settingPart .settingEle:hover,
+.accountPart .accountEle:hover {
+  opacity: 1;
+  text-shadow: 0 0 black;
+  width: 94%;
+  background-color: #e9e5e5;
+  border-radius: 5px;
+  padding: 10px;
+}
+.toggleButton {
+  position: absolute;
+  top: 52px;
+  right: -23px;
+}
+.toggleButton button {
+  color: black;
+  outline: none;
+  border: none;
+  padding: 7px;
+  box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0 0 0 black;
+  border-radius: 5px;
+}
+.toggleButton button i {
+  font-size: 16px;
+  font-weight: 700;
+}
