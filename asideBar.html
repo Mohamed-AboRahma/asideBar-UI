@@ -4,74 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aside Bar</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
     <link rel="styleSheet" href="./asideBar.css" />
   </head>
   <body>
     <aside class="customAside">
-      <div class="infoAboutUser">
-        <div class="userImage">
-          <img src="./MyImg.jpg" />
+      <div class="container">
+        <div class="infoAboutUser">
+          <div class="userImage">
+            <img src="./MyImg.jpg" />
+          </div>
+          <div class="userData">
+            <span class="name">Mohamed Ali</span>
+            <span class="job">Node Js Developer</span>
+          </div>
         </div>
-        <div class="userData">
-          <span class="name">Mohamed Ali</span>
-          <span class="job">Web Developer</span>
+        <div class="toggleButton">
+          <i class="ph-bold ph-list"></i>
         </div>
       </div>
 
       <div class="mainPart">
         <span class="mainWord">Main</span>
         <div class="mainElements">
-          <div class="mainEle">
-            <i class="ph-thin ph-house"></i>
+          <div class="mainElement active">
+            <i class="ph-bold ph-house"></i>
             <span>Dashboard</span>
           </div>
-          <div class="mainEleCustom">
-            <div><i class="ph-thin ph-user"></i><span>Audience</span></div>
-            <div>
-              <i class="ph-thin ph-caret-down"></i>
+          <div class="mainElement mainElementWithList">
+            <div class="mainElementDropDown">
+              <i class="ph-bold ph-user"></i>
+              <span>Audience</span>
+            </div>
+            <div class="dropDownIcon">
+              <i class="ph-bold ph-caret-down audienceButton"></i>
             </div>
           </div>
-          <div class="mainEle">
-            <i class="ph-thin ph-note-pencil"></i>
+          <div class="audienceDropdown collapseHiddenElement">
+            <span>useres</span>
+            <span>subscriprers</span>
+          </div>
+          <div class="mainElement">
+            <i class="ph-bold ph-note-pencil"></i>
             <span>posts</span>
           </div>
-          <div class="mainEle">
-            <i class="ph-thin ph-calendar-check"></i>
+          <div class="mainElement">
+            <i class="ph-bold ph-calendar-check"></i>
             <span>schuadule</span>
           </div>
-          <div class="mainEleCustom">
-            <div><i class="ph-thin ph-chart-bar"></i> <span>income</span></div>
-            <div><i class="ph-thin ph-caret-down"></i></div>
+          <div class="mainElement mainElementWithList">
+            <div class="mainElementDropDown">
+              <i class="ph-bold ph-chart-bar"></i>
+              <span>income</span>
+            </div>
+            <div class="dropDownIcon">
+              <i class="ph-bold ph-caret-down"></i>
+            </div>
+          </div>
+          <div class="incomDropdown collapseHiddenElement">
+            <span>Earings</span>
+            <span>Funds</span>
+            <span>Declious</span>
+            <span>Payouts</span>
           </div>
         </div>
       </div>
 
       <div class="settingPart">
         <span class="settingWord">Setting</span>
-        <div class="settingEle">
-          <i class="ph-thin ph-gear"></i>
-          <span>Settings</span>
+        <div class="settingsElements">
+          <div class="settingsElement">
+            <i class="ph-bold ph-gear"></i>
+            <span>Settings</span>
+          </div>
         </div>
       </div>
 
       <div class="accountPart">
         <span class="accountWord">Account</span>
-        <div class="accountEle">
-          <i class="ph-thin ph-info"></i>
-          <span>Help</span>
+        <div class="accountsElements">
+          <div class="accountsElement">
+            <i class="ph-bold ph-info"></i>
+            <span>Help</span>
+          </div>
+          <div class="accountsElement">
+            <i class="ph-bold ph-sign-out"></i>
+            <span>logout</span>
+          </div>
         </div>
-        <div class="accountEle">
-          <i class="ph-thin ph-sign-out"></i>
-          <span>logout</span>
-        </div>
-      </div>
-      <div class="toggleButton">
-        <button>
-          <i class="ph-thin ph-arrow-left"></i>
-        </button>
       </div>
     </aside>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <audio
+      src="./EAR7D8H-heavy-toggle-switch-on.mp3"
+      class="toggleSound"
+    ></audio>
+    <audio
+      src="./mixkit-fast-double-click-on-mouse-275.wav"
+      class="clickSound"
+    ></audio>
     <script src="./asideBar.js"></script>
   </body>
 </html>

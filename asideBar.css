@@ -1,162 +1,203 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  background-color: #ddd;
-  height: 100vh;
+  background-color: #5b6677;
 }
 
 .customAside {
-  width: 195px;
-  height: 95%;
+  width: 233px;
+  height: 95.2vh;
   background-color: white;
-  color: black;
-  border-top-right-radius: 45px;
-  border-bottom-right-radius: 35px;
+  border-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 15px;
   box-shadow: 0 0 5px white;
-  position: relative;
+  overflow: hidden;
 }
-
+.container {
+  display: flex;
+  place-items: center;
+}
 .infoAboutUser {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 22px;
   box-shadow: 2px 2px 10px rgb(227 213 213);
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 13px;
+  padding: 8px;
+  flex-grow: 2;
 }
 
 .infoAboutUser .userImage img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 .infoAboutUser .userData {
   display: flex;
   flex-direction: column;
 }
-.userData .info .name {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
+.userData .name {
+  font-size: 14px;
+  font-weight: 500;
 }
 .infoAboutUser .userData .job {
-  opacity: 0.6;
-  font-family: monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #757575;
+  margin-top: 1px;
 }
-
-.mainPart {
-  margin-top: 25px;
-}
-.mainPart .mainWord {
-  opacity: 0.6;
+.toggleButton {
+  color: black;
+  opacity: 0.8;
+  font-size: 35px;
+  margin-left: 10px;
+  font-weight: 700;
   cursor: pointer;
 }
-.mainPart .mainEle,
-.mainPart .mainEleCustom {
-  width: fit-content;
-  margin-top: 25px;
+/* this css when toggle*/
+.collapseAside {
+  width: 50px;
   display: flex;
-  place-items: center;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
+  flex-direction: column;
+  place-items: center !important;
 }
-.mainPart .mainEleCustom {
-  width: 100%;
-  justify-content: space-between;
+.collapseContainer {
+  flex-direction: column-reverse;
 }
-.mainPart .mainEleCustom :first-child {
-  display: flex;
-  place-items: center;
-  transition: all 0.5s ease-in-out;
+.collapseCenterToggle {
+  margin-right: 10px;
 }
-.settingPart {
+.collapseInfoAboutUser {
+  box-shadow: none;
+}
+.centerImg {
+  margin-right: 0px !important;
+}
+
+.collapseHiddenElement {
+  display: none !important;
+}
+.collapseInfoImage {
+  margin-right: 0px !important;
+}
+.collapseToggleButton {
+  margin-left: 0px !important;
+}
+.collapsePart .mainElements .mainElement,
+.collapsePart .settingsElements .settingsElement,
+.collapsePart .accountsElements .accountsElement,
+.collapsePart .mainElements .audienceDropdown span,
+.collapsePart .mainElements .incomDropdown span {
+  background-color: #fff !important;
+  margin-left: 7px;
+}
+
+/*  */
+
+.mainPart,
+.settingPart,
+.accountPart {
   margin-top: 20px;
 }
-.settingPart .settingWord {
-  opacity: 0.7;
-  display: inline-block;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-.settingEle {
+.collapsePart {
   display: flex;
+  flex-direction: column;
   place-items: center;
-  transition: all 0.5s ease-in-out;
-  width: fit-content;
 }
-
 .accountPart {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
+.mainPart .mainWord,
+.settingPart .settingWord,
 .accountPart .accountWord {
-  opacity: 0.7;
-  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #757575;
   cursor: pointer;
 }
-
-.accountPart .accountEle {
+.mainPart .mainElement,
+.settingPart .settingsElement,
+.accountPart .accountsElement {
   display: flex;
   place-items: center;
-  margin-top: 5px;
-  transition: all 0.5s ease-in-out;
-  width: fit-content;
+  margin-top: 9px;
+  padding: 5px;
+}
+.mainPart .mainElementWithList .mainElementInfo {
+  display: flex;
+  place-items: center;
+}
+.mainPart .mainElementWithList {
+  justify-content: space-between;
+}
+.mainElementDropDown {
+  display: flex;
+  place-items: center;
 }
 
-.mainPart .mainElements .mainEle i,
-.settingPart .settingEle i,
-.mainEleCustom i,
-.accountPart .accountEle i {
+.mainPart .mainElements .mainElement i,
+.settingPart .settingsElement i,
+.accountPart .accountsElement i {
   margin-right: 12px;
   cursor: pointer;
-  font-size: 23px;
+  color: #757575;
+  font-size: 22px;
 }
 
-.mainPart .mainElements .mainEle span,
-.mainEleCustom span,
-.settingPart .settingEle span,
-.accountPart .accountEle span {
-  opacity: 0.7;
+.mainPart .mainElements .mainElement span,
+.settingPart .settingsElement span,
+.accountPart .accountsElement span,
+.audienceDropdown span,
+.incomDropdown span {
+  font-size: 14px;
+  color: #757575;
   cursor: pointer;
   flex-grow: 2;
 }
-
-.mainPart .mainElements .mainEle:hover,
-.mainPart .mainElements .mainEleCustom div:first-child:hover,
-.settingPart .settingEle:hover,
-.accountPart .accountEle:hover {
-  opacity: 1;
+.mainPart .mainElements .mainElement:hover,
+.settingPart .settingsElements .settingsElement:hover,
+.accountPart .accountsElements .accountsElement:hover,
+.mainPart .mainElements .audienceDropdown span:hover,
+.mainPart .mainElements .incomDropdown span:hover,
+.active {
   text-shadow: 0 0 black;
-  width: 94%;
-  background-color: #e9e5e5;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  color: #000;
 }
-.toggleButton {
-  position: absolute;
-  top: 52px;
-  right: -23px;
+.mainPart .mainElements .mainElement:hover :nth-child(n + 1),
+.settingPart .settingsElement:hover :nth-child(n + 1),
+.accountPart .accountsElement:hover :nth-child(n + 1),
+.mainPart .mainElements .audienceDropdown span:hover,
+.mainPart .mainElements .incomDropdown span:hover {
+  color: #000;
 }
-.toggleButton button {
-  color: black;
-  outline: none;
-  border: none;
-  padding: 7px;
-  box-shadow: 0 0 3px rgb(0 0 0 / 30%);
-  background-color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-shadow: 0 0 0 black;
-  border-radius: 5px;
+.mainPart .mainElements .mainElement.active :nth-child(n + 1),
+.settingPart .settingsElement.active :nth-child(n + 1),
+.accountPart .accountsElement.active :nth-child(n + 1),
+.mainPart .mainElements .audienceDropdown.active span:hover,
+.mainPart .mainElements .incomDropdown.active span:hover {
+  color: #000;
 }
-.toggleButton button i {
-  font-size: 16px;
-  font-weight: 700;
+.audienceDropdown,
+.incomDropdown {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+  border-left: 1px solid #f6f6f6;
+}
+.audienceDropdown span,
+.incomDropdown span {
+  margin-bottom: 5px;
 }
